@@ -8,7 +8,7 @@ function cambiarMesa1(){
     iniciarTiempo();
 }
 function iniciarTiempo(){
-    alert("Hola mundo");
+    
 }
 
 function cambiarMesa2(){
