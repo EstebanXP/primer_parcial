@@ -1,9 +1,14 @@
 h1{
-    
+  font-family:"Helvetica";
+  text-align: center;
+  font-size:300%;
 }
-  table,td {
-	border: 1px solid black;
+
+table,td {
+  border: 1px solid black;
 }
+
 thead{
-    font-size: large;
+    text-align: center;
+    font-size: xx-large;
 }
