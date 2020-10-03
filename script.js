@@ -1,4 +1,5 @@
 function cambiarMesa(idmesaaux,idt1,idt2,idt3){
+    
     var t1=0;
     mesa1=document.getElementById(idmesaaux);
     if(mesa1.src.match('mNoUso')){
@@ -7,6 +8,8 @@ function cambiarMesa(idmesaaux,idt1,idt2,idt3){
         moverReloj(idt2,mesa1,idt3);
     }else{
         mesa1.src="mNoUso.jpg";
+  
+
     }
 }
 
@@ -26,6 +29,12 @@ function moverReloj(idt2,mesa,idt3){
           l.innerHTML = n;
           n++;
           if(mesa.src.match('mNoUso')){
+            momento2=new Date();
+            hora=momento2.getHours()
+            minuto=momento2.getMinutes()
+            sgs=momento2.getSeconds()
+            imHora2=hora+" : "+minuto+" : "+sgs;
+            document.getElementById(idt2).innerHTML=imHora2;
             contarDinero(n,idt3);
             clearInterval(intervalo);
         }
