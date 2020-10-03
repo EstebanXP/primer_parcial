@@ -3,7 +3,11 @@ h1{
   text-align: center;
   font-size:300%;
 }
-
+h2{
+  font-family:"Helvetica";
+  text-align: center;
+  font-size:150%;
+}
 table,td {
   border: 1px solid black;
 }
@@ -11,4 +15,8 @@ table,td {
 thead{
     text-align: center;
     font-size: xx-large;
+}
+
+body{
+  background-color: #2A89A0;
 }

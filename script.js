@@ -5,7 +5,6 @@ function cambiarMesa(idmesaaux,idt1,idt2,idt3){
         mesa1.src="mUso.jpg";
         iniciarTiempo(idt1);
         moverReloj(idt2,mesa1,idt3);
-        
     }else{
         mesa1.src="mNoUso.jpg";
     }
@@ -36,6 +35,6 @@ function moverReloj(idt2,mesa,idt3){
 }
 
 function contarDinero(tiempo1,idt3){
-    document.getElementById(idt3).innerHTML=(tiempo1*0.0139)-0.0139;
+    document.getElementById(idt3).innerHTML=(tiempo1*0.0139)-0.0139+" Pesos";
 }
 
