@@ -28,13 +28,14 @@ function moverReloj(idt2,mesa){
       var intervalo=setInterval(function(){
           l.innerHTML = n;
           n++;
+          if(mesa.src.match('mNoUso')){
+            clearInterval(intervalo);
+            return n;
+        }
       },999);
+      n=0;
       
-      if(mesa.src.match('mUso')){
-          alert("Hola mundo");
-      }
+      
 }
 
-function pausar(inter){
-    clearInterval(inter);
-}
+
