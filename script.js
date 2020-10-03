@@ -1,13 +1,13 @@
-function cambiarMesa(idmesaaux,idt1,idt2){
-    var inter1;
+function cambiarMesa(idmesaaux,idt1,idt2,idt3){
+    var t1=0;
     mesa1=document.getElementById(idmesaaux);
     if(mesa1.src.match('mNoUso')){
         mesa1.src="mUso.jpg";
         iniciarTiempo(idt1);
-        inter1=moverReloj(idt2,mesa1);
+        moverReloj(idt2,mesa1,idt3);
+        
     }else{
         mesa1.src="mNoUso.jpg";
-        mesa1.pausar(inter1);
     }
 }
 
@@ -18,24 +18,24 @@ function iniciarTiempo(idt1){
     sgs=momento1.getSeconds()
     imHora=hora+" : "+minuto+" : "+sgs;
     document.getElementById(idt1).innerHTML=imHora;
-    
 }
 
-function moverReloj(idt2,mesa){
-    
-      var n=0;
+function moverReloj(idt2,mesa,idt3){
+      var n=1;
       var l=document.getElementById(idt2);
       var intervalo=setInterval(function(){
           l.innerHTML = n;
           n++;
           if(mesa.src.match('mNoUso')){
+            contarDinero(n,idt3);
             clearInterval(intervalo);
-            return n;
         }
       },999);
-      n=0;
       
       
 }
 
+function contarDinero(tiempo1,idt3){
+    document.getElementById(idt3).innerHTML=(tiempo1*0.0139)-0.0139;
+}
 
